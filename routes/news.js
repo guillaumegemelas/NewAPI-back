@@ -11,7 +11,7 @@ router.get("/getnews", async (req, res) => {
   try {
     //poiur le moment la requete fonctionne en dur avec l'ApiKey dans .env, il va falloir mettre en dynamique (search, sort, pages.....)
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=fr&pageSize=31&apiKey=${ApiKey}`
+      `https://newsapi.org/v2/top-headlines?country=fr&pageSize=60&apiKey=${ApiKey}`
     );
     console.log(response.data);
     res.status(200).json(response.data);
@@ -28,7 +28,7 @@ router.get("/getnewsbusiness", async (req, res) => {
   try {
     //poiur le moment la requete fonctionne en dur avec l'ApiKey dans .env, il va falloir mettre en dynamique (search, sort, pages.....)
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=fr&category=business&pageSize=51&apiKey=${ApiKey}`
+      `https://newsapi.org/v2/top-headlines?country=fr&category=business&pageSize=60&apiKey=${ApiKey}`
     );
     console.log(response.data);
     res.status(200).json(response.data);
@@ -45,7 +45,7 @@ router.get("/getnewssport", async (req, res) => {
   try {
     //poiur le moment la requete fonctionne en dur avec l'ApiKey dans .env, il va falloir mettre en dynamique (search, sort, pages.....)
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=fr&category=sports&pageSize=51&apiKey=${ApiKey}`
+      `https://newsapi.org/v2/top-headlines?country=fr&category=sports&pageSize=60&apiKey=${ApiKey}`
     );
     console.log(response.data);
     res.status(200).json(response.data);

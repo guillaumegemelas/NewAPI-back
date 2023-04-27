@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-//route test
+//route test: le serveur fonctionne!
 app.get("/", (req, res) => {
   res.json({ message: "Hi" });
 });
